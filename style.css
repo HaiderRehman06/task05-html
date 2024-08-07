@@ -4,6 +4,7 @@ body{
     background-color: aliceblue;
 }
 *{
+    font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -14,7 +15,6 @@ header{
     background-color: rgb(150, 91, 234);
     padding: 20px;
     font-size: 20px;
-    font-family: 'Poppins', sans-serif;
 }
 #ic{
     margin-right:20px ;
@@ -45,7 +45,6 @@ header{
     background-color:white;
     border: 2px solid wheat;
     padding: 20px 0; 
-    font-family: 'Poppins';
 }
 .digital{
     background-image: url(./logos/bg-image.jpg);
@@ -61,4 +60,59 @@ header{
     width: 30%;
     height: 90%;
     background-color: none;
+}
+h1{
+    margin-left: 2%;
+}
+.SP{
+    margin-left: 2%;
+    margin-top: 50px;
+    text-align:center ;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;    
+}
+.rows{
+    background-color: white;
+}
+.rows img{
+    width: 240px ;
+}
+@media (max-width:1220px){
+    .Catagory {
+        font-size: 10px;
+    }
+    .Catagory a{
+        font-size:20px ;
+    }
+    .SP{
+        margin-left: 6%;
+    }
+}
+@media(max-width:900px){
+    .digital h1{
+        font-size: 30px;
+    }
+    .navbar input{
+        width: 7cm;
+    }
+}
+
+@media(max-width:700px){
+    .digital h1{
+        font-size: 30px;               
+    }
+    .digital img{
+        width: 100px;
+        height: 140px;
+    }
+    .navbar input{
+        width: 6cm;
+    }
+    .SP{
+        margin-left: 10%;
+    }
+    .navbar a{
+        font-size: 10px;
+    }
 }

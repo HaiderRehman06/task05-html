@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+body{
+    background-color: aliceblue;
+}
 *{
     padding: 0;
     margin: 0;
@@ -12,6 +15,9 @@ header{
     padding: 20px;
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
+}
+#ic{
+    margin-right:20px ;
 }
 .navbar input{
     width: 13cm;
@@ -29,6 +35,30 @@ header{
     justify-content: space-evenly;
     margin: 30px 0;
 }
-.All img{
-    width: 50%;
+.Catagory a{
+    text-decoration: none;
+    font-size: x-large; 
+    color: Black;  
+    font-weight: 500;
+}
+.Catagory{
+    background-color:white;
+    border: 2px solid wheat;
+    padding: 20px 0; 
+    font-family: 'Poppins';
+}
+.digital{
+    background-image: url(./logos/bg-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.digital  img{
+    width: 30%;
+    height: 90%;
+    background-color: none;
 }

@@ -83,11 +83,11 @@ h4{
     margin: 50px;
 }
 
-
 /* laptops */
 
 .laptops{
     display: flex;
+    justify-content: space-evenly;
     
 }
 
@@ -145,5 +145,19 @@ h3{
 }
 .front img{
     border-radius: 10px;
+    display: block;
+    margin: 0 auto;
    
+}
+
+/* Footer section */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+footer{
+    background: rgb(116, 198, 228);
+    text-align: center;
 }

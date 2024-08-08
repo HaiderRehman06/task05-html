@@ -4,115 +4,188 @@ body{
     background-color: aliceblue;
 }
 *{
-    font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins';
 }
 header{
-    display: flex;
-    justify-content:space-evenly;
-    background-color: rgb(150, 91, 234);
-    padding: 20px;
-    font-size: 20px;
-}
-#ic{
-    margin-right:20px ;
-}
-.navbar input{
-    width: 13cm;
-    height: 40px;
-    border: none;
-    border-radius: 10px;
-    outline: transparent;
-    font-size:large;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-.All{
-    display: grid;
-    grid-template-columns: 20% 75%;
-    justify-content: space-evenly;
-    margin: 30px 0;
-}
-.Catagory a{
-    text-decoration: none;
-    font-size: x-large; 
-    color: Black;  
-    font-weight: 500;
-}
-.Catagory{
-    background-color:white;
-    border: 2px solid wheat;
-    padding: 20px 0; 
-}
-.digital{
-    background-image: url(./logos/bg-image.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+    z-index: 100;
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background-color: rgba(215, 136, 215);
+    padding: 1%;
 }
-.digital  img{
-    width: 30%;
-    height: 90%;
-    background-color: none;
+h2{
+    font-size:40px ;
+}
+.navbar input{
+    width: 15cm;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    outline: transparent;
+    padding-left:15px ;
+    padding-right:15px ;
+}
+.All{
+    margin-top: 3%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.Catagory{
+    background-color: white;
+    margin:0px 20px ;
+    padding: 30px;
+}
+.Catagory a{
+    text-decoration:none;
+    font-size: larger;
+    color: black;
+    font-weight: 600;
+}
+.digital {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(./logos/bg-image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:rgb(250, 250, 250, .8);
+    font-size: 30px;
+}
+.digital img{
+    width: 300px;
+    height: 250px;
 }
 h1{
-    margin-left: 2%;
+    margin: 3%;
 }
 .SP{
-    margin-left: 2%;
-    margin-top: 50px;
-    text-align:center ;
-    display:flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;    
+    display: flex;
+    text-align: center;
+}
+.rows > img{
+    width: 265px;
 }
 .rows{
-    background-color: white;
-}
-.rows img{
-    width: 240px ;
-}
-@media (max-width:1220px){
-    .Catagory {
-        font-size: 10px;
-    }
-    .Catagory a{
-        font-size:20px ;
-    }
-    .SP{
-        margin-left: 6%;
-    }
-}
-@media(max-width:900px){
-    .digital h1{
-        font-size: 30px;
-    }
-    .navbar input{
-        width: 7cm;
-    }
+    margin-right: 1%;
+    background-color: rgb(255, 255, 255);
 }
 
-@media(max-width:700px){
-    .digital h1{
-        font-size: 31px;               
-    }
-    .digital img{
-        width: 100px;
-        height: 140px;
-    }
-    .navbar input{
-        width: 6cm;
-    }
-    .SP{
-        margin-left: 10%;
-    }
-    .navbar a{
-        font-size: 10px;
-    }
+
+
+
+
+/* laptops */
+
+.laptops{
+    display: flex;
+}
+
+.container{
+    width: 300px;
+    height: 300px;
+    margin-left: 30px;
+} 
+.container:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg) ; 
+    transition: 2s ease;
+    perspective: 500px;
+}
+.card{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+    background-color: white; 
+}
+.front,
+.back{
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    position: absolute;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 0 , 0.25);
+    backface-visibility: hidden;
+}
+.front{
+    background-image:url(./image/Dell\ Vostro\ 3520\ Laptop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.HP{
+    background-image:url(./image/HP\ 15-FD0021NX.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    position: absolute;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 0 , 0.25);
+    backface-visibility: hidden;
+}
+.HP-3{
+    background-image:url(./image/HP\ 250\ G10\ Laptop\ 8X8K2ES.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    position: absolute;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 0 , 0.25);
+    backface-visibility: hidden;
+}
+.HP-4{
+    background-image:url(./image/HP\ Laptop\ 14-EP0792WM.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    position: absolute;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 0 , 0.25);
+    backface-visibility: hidden;
+}
+.ROG-5{
+    background-image:url(./image/Asus-creator-laptop.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.5rem;
+    position: absolute;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 0 , 0.25);
+    backface-visibility: hidden;
+
+}
+.back{
+    background-color: #fffafa;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.back h1{
+    font-size: 25px;
+}
+.back button{
+    text-align: center;
+    height: 35px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top: 20px;
 }

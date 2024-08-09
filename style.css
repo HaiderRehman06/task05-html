@@ -9,10 +9,7 @@ body{
     box-sizing: border-box;
     font-family: 'Poppins';
 }
-/* @keyframes slide-down{
-    from{opacity: 0;transform: translateY(-100%);} 
-    to{opacity: 1;} 
-} */
+
 header{
     z-index: 100;
     position: sticky;
@@ -22,8 +19,6 @@ header{
     align-items: center;
     background-color: rgba(215, 136, 215);
     padding: 1%;
-    /* animation: slide-down;
-    animation-duration: 2s; */
 }
 .navbar input{
     width: 15cm;
@@ -52,27 +47,13 @@ font-weight: 600;
     animation: slide-left;
     animation-duration: 1s;
 }
-@keyframes slide-left{
+/* @keyframes slide-left{
     from{transform: translateX(100%);opacity: 0;} 
-}
+} */
 .Catagory a{
     text-decoration:none;
     color: black;
     font-weight: 600;
-}
-.text{
-    border-right: 2px solid;
-    width: 100%;
-    overflow:hidden;
-    white-space: nowrap;
-    animation: typing 2s,
-    cursor .4s step-end infinite alternate;
-}
-@keyframes cursor{
-    50%{border-color: transparent;}
-}
-@keyframes typing{
-    from{width: 0;}
 }
 .digital {
     display: flex;
@@ -104,12 +85,12 @@ font-weight: 600;
 .rows{
     margin-right: 1%; 
      margin-left: 1%;
-     margin-top: 20px;
+     margin-top: 50px;
     background-color: rgb(255, 255, 255);
 }
 h4{
     font-size: x-large;
-    margin: 50px;
+    margin: 50px 0px 0px 50px; 
 }
 
 /* laptops */
@@ -121,16 +102,18 @@ h4{
 }
 
 .container{
-    margin-top: 30px;
+    margin-top: 70px;
     width: 300px;
     height: 300px;
     margin-left: 20px;
+    perspective: 500px;
 } 
 .container:hover > .card{
     cursor: pointer;
     transform: rotateY(180deg) ; 
     transition: 2s ease;
     perspective: 500px;
+    
 }
 .card{
     height: 100%;
@@ -204,4 +187,48 @@ footer{
     margin-top: 20px;
     background: rgb(116, 198, 228);
     text-align: center;
+}
+
+/* Adding media queries */
+
+@media (max-width:1240px){
+    .Catagory p{
+        font-size: 15px;
+    }
+    .Catagory a{
+        font-size: 15px;
+    }
+    .Catagory{
+        padding: 15px;
+    }
+    .digital img{
+        width: 200px;
+        height: 150px;   
+    }
+    .digital h2{
+        font-size: 100%;
+    }
+    .navbar input{
+        width: 9cm;
+    }
+}
+@media (max-width:910px){
+    .Catagory a{
+        font-size: 12px;
+    }
+    .Catagory p{
+        font-size: 14px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .navbar input{
+        width: 8cm;
+    }
+    .SP{
+        margin: 2%;
+    }
+}
+@media (max-wisth:750px){
+    
 }

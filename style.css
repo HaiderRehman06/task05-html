@@ -31,25 +31,27 @@ header{
     padding-right:15px ;
 }
 .All{
-    margin-top: 2%;
+    margin-top: 4%;
     display: grid;
     grid-template-columns: 20% 80%;
-   
 }
 .Catagory p{
 font-size: 20px;
 font-weight: 600;
+color: white;
+padding-left:15px;
+background-color: rgb(174, 81, 237);
 }
 .Catagory{
     background-color: white;
     margin:0px 20px ;
-    padding: 30px;
+    padding: 20px;
     animation: slide-left;
     animation-duration: 1s;
 }
-/* @keyframes slide-left{
+@keyframes slide-left{
     from{transform: translateX(100%);opacity: 0;} 
-} */
+}
 .Catagory a{
     text-decoration:none;
     color: black;
@@ -78,13 +80,14 @@ font-weight: 600;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
+
 }
 .rows img{
     width: 150px;
 }
 .rows{
     margin-right: 1%; 
-     margin-left: 1%;
+     margin-left: 2%;
      margin-top: 50px;
     background-color: rgb(255, 255, 255);
 }
@@ -229,6 +232,75 @@ footer{
         margin: 2%;
     }
 }
-@media (max-wisth:750px){
+@media (max-width:850px){
+    #ic{
+        height: 25px;
+    } 
+    .digital img{
+        display: none;
+    }
+    .All{
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+    .Catagory p{
+        font-size: 17px;
+    }
+    .SP{
+        justify-content: space-evenly;
+        margin-top: -20px;
+    }
+}
+@media (max-width:655px){
+    .digital h2{
+        font-size:25px ;
+        margin-left: -20%;
+    }
+    .All{
+        grid-template-columns: 35% 65%;
+    }
+    .navbar input{
+        width: 6cm;
+    }
+    h1{
+        font-size: 23px;
+    }
+}
+@media (max-width:480px){
+    .Catagory p{
+        font-size: 12px;
+        padding: 0;
+    }
+    .navbar input{
+        width: 4.5cm;
+        height: 25px;
+    }
+    h1{
+        font-size: 18px;
+    }
+    .digital h2{
+        font-size: 22px;
+    }
+    h1{
+        padding: 10px;
+    }
+}
+@media (max-width:375px){
+    .navbar input{
+        width: 3cm;
+    }
+    .All{
+        grid-template-columns: 50% 50%;  
+    }
+    .digital h2{
+        font-size: 18px;
+        margin-left: 10px;
+    }
+    #ic{
+        height: 20px;
+    }    
+    h1{
+        padding: 10px;
+    }
     
 }

@@ -19,11 +19,11 @@ header{
     align-items: center;
     background-color: rgba(215, 136, 215);
     padding: 1%;
-    animation: slide-down;
+    animation: comes-down;
     animation-duration: 2s;
 }
-@keyframes slide-down{
-    from{transform: translateY(-100%);} 
+@keyframes comes-down{
+    from{transform: translateY(-100%);}
 }
 .navbar input{
     width: 13cm;

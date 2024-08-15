@@ -23,7 +23,7 @@ header{
     animation-duration: 2s;
 }
 @keyframes slide-down{
-    /* from{transform: translateY(-100%);}  */
+    from{transform: translateY(-100%);} 
 }
 .navbar input{
     width: 13cm;

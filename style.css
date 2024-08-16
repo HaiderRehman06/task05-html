@@ -19,11 +19,6 @@ header{
     align-items: center;
     background-color: rgba(215, 136, 215);
     padding: 1%;
-    animation: comes-down;
-    animation-duration: 2s;
-}
-@keyframes comes-down{
-    from{transform: translateY(-100%);}
 }
 .navbar input{
     width: 13cm;
@@ -83,23 +78,38 @@ header{
 /* Smart Phones */
 
 .SP{
+    
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-
 }
 .rows img{
     width: 150px;
 }
 .rows{
-    margin-right: 1%; 
-     margin-left: 2%;
-     margin-top: 50px;
+    padding-bottom: 35px;
+    margin: 50px 1% 0px 2%; 
     background-color: rgb(255, 255, 255);
 }
 h4{
     font-size: x-large;
     margin: 50px 0px 40px 50px; 
+}
+#img-1,#img-3,#img-5{
+    animation: come-down;
+    animation-timeline: view();
+    animation-range:40px 400px;
+}
+#img-2,#img-4,#img-6{
+    animation: comes-up;
+    animation-timeline: view();
+    animation-range:40px 400px;
+}
+@keyframes comes-up{
+    from{transform: translateY(50%);opacity: 0;}
+}
+@keyframes come-down{
+    from{transform: translateY(-50%);opacity: 0;}
 }
 
 /* laptops */
@@ -184,25 +194,101 @@ h3{
     border-radius: 15px;
     box-shadow: 4px 5px 10px;
 }
+#watch-1{
+    animation: slide-right;
+    animation-timeline: view();
+    animation-range:0px 500px;
+}
+#watch-2{
+    animation: s-down;
+    animation-timeline: view();
+    animation-range:0px 500px;
+}
+#watch-3{
+    animation: s-up;
+    animation-timeline: view();
+    animation-range:0px 500px;
+}
+#watch-4{
+    animation: slide-left;
+    animation-timeline: view();
+    animation-range:0px 500px
+}
+#watch-5{
+    animation: slide-right;
+    animation-timeline: view();
+    animation-range:0px 500px
+}
+#watch-6{
+    animation: slide-left;
+    animation-timeline: view();
+    animation-range:0px 500px
+}
+@keyframes slide-right{
+    from{opacity: 0;transform: translateX(-50%);}
+}
+@keyframes s-down{
+    from{opacity: 0;transform: translateY(-50%);}
+}
+@keyframes s-up{
+    from{opacity: 0;transform: translateY(50%);}
+}
+@keyframes slide-left{
+    from{opacity: 0;transform: translateX(50%);}
+}
+
 
 /* Footer section */
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 15px;
 }
 footer{
     margin-top: 20px;
     background: rgb(116, 198, 228);
     text-align: center;
 }
+.avatars {
+    --avatar-count:10;
+    --avatar-size:50px;
+    --transition-duration: 500ms;
+    --column-size:calc(var(--avatar-size) / 2);
+    display: grid;
+    grid-template-columns:repeat(4, var(--column-size));
+    transition: grid-template-columns var(--transition-duration);
+    transition-delay:var(--transition-duration) ;  
+    
+}
+.avatars:hover,
+.avatar:focus-within{
+    --column-size:calc(var(--avatar-size) * 1.2);
+    transition-delay: 0ms;
+}
+.avatar{
+    width: var(--avatar-size);
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 100vw;
+    border: 5px solid white;
+    box-shadow: .25rem .25rem .5rem hsl(0 0% 0% / .2);
+    transition: var(--transition-duration);
+    background-color: wheat;
+}
+
+.avatar:hover,
+.avatar:focus { 
+        scale:1.4;  
+        z-index: 2; 
+        border-color:rgb(72, 72, 72); 
+}
 
 /* Adding media queries */
 
 @media (max-width:1240px){
     .Catagory p{
-        font-size: 15px;
+        font-size:18px;
     }
     .Catagory a{
         font-size: 15px;
@@ -214,9 +300,7 @@ footer{
         width: 200px;
         height: 150px;   
     }
-    .digital h2{
-        font-size: 100%;
-    }
+    
     .navbar input{
         width: 9cm;
     }
@@ -224,9 +308,6 @@ footer{
 @media screen (max-width:910px){
     .Catagory a{
         font-size: 12px;
-    }
-    .Catagory p{
-        font-size: 14px;
     }
     h1{
         font-size: 25px;
@@ -266,8 +347,8 @@ footer{
 }
 @media (max-width:655px){
     .digital h2{
-        font-size:25px ;
-        margin-left: -20%;
+        font-size: 40px;
+        margin-left: 20px;
     }
     .All{
         grid-template-columns: 35% 65%;
@@ -285,7 +366,7 @@ footer{
 }
 @media (max-width:480px){
     .Catagory p{
-        font-size: 12px;
+        font-size: 15px;
         padding: 0;
     }
     .navbar input{
@@ -296,7 +377,7 @@ footer{
         font-size: 18px;
     }
     .digital h2{
-        font-size: 22px;
+        font-size: 30px;
     }
     h1{
         padding: 10px;
@@ -310,7 +391,7 @@ footer{
         grid-template-columns: 50% 50%;  
     }
     .digital h2{
-        font-size: 18px;
+        font-size: 30px;
         margin-left: 10px;
     }
     #ic{

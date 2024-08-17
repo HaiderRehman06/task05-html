@@ -12,7 +12,14 @@ body{
     box-sizing: border-box;
     font-family: 'Poppin',sans-serif;
 }
-
+.chevron img{
+    width:0.7cm;
+}
+.chevron{
+    position: fixed;
+    right:2% ;
+    bottom:3% ;    
+}
 header{
     z-index: 100;
     position: sticky;
